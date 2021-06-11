@@ -1,18 +1,14 @@
 import React from 'react';
-import './card.css';
+import {HeoreCard} from './CardStyle';
+
 const HereosCards = ({item}) => {
 
-  
-
-    return (
-        <div className='content'>
-        <div className='content-front'>
-          
-         
-            <img src={item.thumbnail.path + "." + item.thumbnail.extension} alt={item.name} />
+    return (<div>
+          <HeoreCard>
+              <img src={item.thumbnail.path + "." + item.thumbnail.extension} alt={item.name}/>
               <h1>{item.name}</h1>
-           
-        </div>
+              <i class="far fa-star"></i>
+          </HeoreCard>
       </div>
 
     )
