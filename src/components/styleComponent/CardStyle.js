@@ -15,10 +15,9 @@ export const HeoreCardContainer = styled.div`
 	button {
 		background: transparent;
 		border: none;
-	}
-	button:hover {
 		color: white;
 	}
+
 	h1 {
 		display: block;
 		position: absolute;

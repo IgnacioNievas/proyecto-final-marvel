@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import HeroesTable from '../components/heroes/HeroesTable';
+import HeroesTable from '../components/tableMaps/HeroesTable';
 import { getCharacters } from '../api/get';
-import Search from '../components/search/Search';
+import Search from '../components/search/SearchCharacter';
+import { Loader } from '../components/loading';
+import ErrHeroes from '../components/erroresComponent/errorHeroes';
 
 const Heroes = () => {
 	const [items, setItems] = useState([]);
@@ -12,15 +14,22 @@ const Heroes = () => {
 		getCharacters(query)
 			.then((characters) => {
 				setItems(characters);
-				// console.log(characters);
+				console.log(characters);
 			})
 			.finally(() => setLoading(false));
 	}, [query]);
 
-	return (
+	return isLoading ? (
+		<Loader />
+	) : !items.length ? (
 		<div>
 			<Search search={setQuery}></Search>
-			<HeroesTable items={items} isLoading={isLoading} />
+			<ErrHeroes />
+		</div>
+	) : (
+		<div>
+			<Search search={setQuery}></Search>
+			<HeroesTable characters={items} isLoading={isLoading} />
 		</div>
 	);
 };

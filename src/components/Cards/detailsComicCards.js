@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ContainerComicCard } from './choseeComicStyle';
+import { Link, useRouteMatch } from 'react-router-dom';
+import { ContainerComicCard } from '../styleComponent/detailsComicStyle';
 
-const ComicCard = ({ comicitem }) => {
+const DetailsCard = ({ comicitem }) => {
+	const { url } = useRouteMatch();
+
 	return (
 		<ContainerComicCard>
 			<div className='card'>
 				<Link
-					to={`/details/${comicitem.id}`}
+					to={`${url}/comic/${comicitem.id}/${comicitem.title}`}
 					style={{ textDecoration: 'none' }}>
 					<img
 						src={`${comicitem.thumbnail.path}.${comicitem.thumbnail.extension}`}
@@ -23,4 +25,4 @@ const ComicCard = ({ comicitem }) => {
 	);
 };
 
-export default ComicCard;
+export default DetailsCard;

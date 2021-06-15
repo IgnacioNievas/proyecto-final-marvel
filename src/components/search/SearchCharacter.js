@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/marvel-logo.jpeg';
-import { SearchStyle } from './SearchStyle';
+import { SearchStyle } from '../styleComponent/SearchStyle';
 
 const Search = ({ search }) => {
 	const [text, setText] = useState('');
@@ -13,18 +14,20 @@ const Search = ({ search }) => {
 	return (
 		<SearchStyle>
 			<div>
-				<img src={logo} alt='marvel' />
-				<form>
+				<Link to='/'>
+					<img src={logo} alt='marvel' />
+				</Link>
+				<form style={{ width: '70%' }}>
 					<i className='fas fa-search'></i>
 					<input
 						type='text'
-						placeholder='Find a character..'
+						placeholder='Buscar...'
 						onChange={onSearch}
 						value={text}
 					/>
 				</form>
 				<button>
-					<i className='fas fa-star '></i>
+					<i className='far fa-star '></i>
 				</button>
 			</div>
 		</SearchStyle>

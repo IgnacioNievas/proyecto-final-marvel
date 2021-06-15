@@ -23,9 +23,7 @@ export const SearchStyle = styled.section`
 		border: none;
 		font-size: 25px;
 		cursor: pointer;
-	}
-	button:hover {
-		color: blue;
+		color: gray;
 	}
 
 	@media (max-width: 320px) {
@@ -34,7 +32,7 @@ export const SearchStyle = styled.section`
 		}
 
 		input {
-			width: 110px;
+			width: 100px;
 		}
 	}
 `;

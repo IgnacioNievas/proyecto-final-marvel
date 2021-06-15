@@ -35,4 +35,9 @@ export const ContainerComicCard = styled.div`
 		padding: 0;
 		margin: 0;
 	}
+	@media (max-width: 280px) {
+		.card {
+			width: 240px;
+		}
+	}
 `;

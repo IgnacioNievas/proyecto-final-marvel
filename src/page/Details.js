@@ -1,25 +1,44 @@
 import React, { useEffect, useState } from 'react';
+import { getComic } from '../api/get';
 import { useParams } from 'react-router';
-import { getDetails } from '../api/get';
-import Comic from '../components/comic/comic';
+import DetailsTable from '../components/tableMaps/detailsComicTable';
+import Search from '../components/search/SearchCharacter';
+import { Loader } from '../components/loading';
+import ErrComic from '../components/erroresComponent/errorComic';
 
 const Details = () => {
-	const [comic, setComic] = useState(null);
+	const [items, setItems] = useState(null);
+	const [isLoading, setLoading] = useState(true);
+	const [query, setQuery] = useState('');
+	const { id } = useParams();
+	// console.log(id);
 
-	const { comicId } = useParams();
-	// console.log(comicId);
 	useEffect(() => {
-		getDetails(comicId)
-			.then((comic) => {
+		getComic(id, query)
+			.then((comics) => {
 				// debugger;
-				setComic(comic);
-				console.log(comic);
+				setItems(comics);
+				// console.log(comics);
 			})
 			.catch((e) => {
 				console.log(e);
-			});
-	}, [comicId]);
-	return comic && <Comic comic={comic} />;
+			})
+			.finally(() => setLoading(false));
+	}, [id, query]);
+
+	return isLoading ? (
+		<Loader />
+	) : !items.length ? (
+		<div>
+			<Search search={setQuery}></Search>
+			<ErrComic />
+		</div>
+	) : (
+		<div>
+			<Search search={setQuery}></Search>
+			{items && <DetailsTable comics={items} loading={isLoading} />}
+		</div>
+	);
 };
 
 export default Details;
