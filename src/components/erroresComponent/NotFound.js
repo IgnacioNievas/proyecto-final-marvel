@@ -1,10 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-
-export const NotFoun = styled.div``;
+import { ErrStyle } from '../styleComponent/ErrStyle';
 
 const NotFound = () => {
-	return <h1> 404 Not Found</h1>;
+	return (
+		<ErrStyle>
+			<h1>
+				404 -Not Found <i className='fas fa-exclamation-triangle'></i>
+			</h1>
+		</ErrStyle>
+	);
 };
 
 export default NotFound;

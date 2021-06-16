@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/marvel-logo.jpeg';
+import FavoriteContext from '../favorite/favorite';
 import { SearchStyle } from '../styleComponent/SearchStyle';
 
 const Search = ({ search }) => {
 	const [text, setText] = useState('');
+	const { pathname } = useLocation();
+	const { viewFavorite } = useContext(FavoriteContext);
+	// console.log(pathname);
 
 	const onSearch = (e) => {
 		setText(e.target.value);
 		search(e.target.value);
+	};
+	const clickviewHandle = (e) => {
+		e.preventDefault();
+		viewFavorite();
 	};
 
 	return (
@@ -26,9 +34,13 @@ const Search = ({ search }) => {
 						value={text}
 					/>
 				</form>
-				<button>
-					<i className='far fa-star '></i>
-				</button>
+				{pathname === '/' ? (
+					<button onClick={clickviewHandle}>
+						<i className='fas fa-star '></i>
+					</button>
+				) : (
+					''
+				)}
 			</div>
 		</SearchStyle>
 	);

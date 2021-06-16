@@ -5,5 +5,5 @@ export const ErrStyle = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 15%;
+	margin: 10%;
 `;

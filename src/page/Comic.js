@@ -7,9 +7,9 @@ import { Loader } from '../components/loading';
 const Comic = () => {
 	const [comic, setComic] = useState(null);
 	const [isLoading, setLoading] = useState(true);
-
 	const { comicId } = useParams();
 	// console.log(comicId);
+
 	useEffect(() => {
 		getDetails(comicId)
 			.then((comic) => {
