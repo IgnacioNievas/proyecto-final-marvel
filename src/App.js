@@ -1,12 +1,11 @@
-import Heroes from "./components/page/Heroes";
-
+import Routes from './Routes/Routes';
 
 function App() {
-  return (
-    <div>
-      <Heroes/>
-    </div>
-  )
+	return (
+		<div>
+			<Routes />
+		</div>
+	);
 }
 
 export default App;
