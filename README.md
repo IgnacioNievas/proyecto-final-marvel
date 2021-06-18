@@ -53,7 +53,8 @@ npm run start
 Screenshots:
 
 •Characters
-![characters](https://user-images.githubusercontent.com/40864058/122487817-7d679200-cfb2-11eb-83da-1aa27f136ef8.png))
+
+![characters](https://user-images.githubusercontent.com/40864058/122487817-7d679200-cfb2-11eb-83da-1aa27f136ef8.png)
 
 •Comic details
 ![comics_details](https://user-images.githubusercontent.com/40864058/122489451-1fd54480-cfb6-11eb-8d4b-4d8f0dcf8bc1.png)

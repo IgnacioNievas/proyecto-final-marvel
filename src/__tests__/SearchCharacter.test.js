@@ -29,6 +29,11 @@ test('<Search />, comprabacion de elementos y actualizacion de props', () => {
 	expect(button.tagName).not.toBe('INPUT');
 	expect(button).toBeInTheDocument();
 
+	// const clickviewHandle = jest.fn();
+	// userEvent.click(button);
+	// expect(clickviewHandle).toHaveBeenCalled();
+	// expect(clickviewHandle).toHaveBeenCalledTimes(1);
+
 	act(() => {
 		props = create(
 			<BrowserRouter>
