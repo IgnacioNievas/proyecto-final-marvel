@@ -4,8 +4,8 @@ import ComicCard from '../Cards/comicCard';
 const ComicsTable = ({ comic }) => {
 	return (
 		<>
-			{comic.map((items) => (
-				<ComicCard key={items.id} item={items}></ComicCard>
+			{comic.map((comic) => (
+				<ComicCard key={comic.id} comic={comic}></ComicCard>
 			))}
 		</>
 	);

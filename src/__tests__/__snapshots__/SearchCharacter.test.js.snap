@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
+<section
+  className="sc-bdnxRM cuvweL"
+>
+  <div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="marvel"
+        src="marvel-logo.jpeg"
+      />
+    </a>
+    <form
+      style={
+        Object {
+          "width": "70%",
+        }
+      }
+    >
+      <i
+        className="fas fa-search"
+      />
+      <input
+        data-testid="input"
+        onChange={[Function]}
+        placeholder="Buscar..."
+        type="text"
+        value=""
+      />
+    </form>
+    <button
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-star fa"
+        data-testid="i"
+      />
+    </button>
+  </div>
+</section>
+`;
+
+exports[`<Search />, comprabacion de elementos y actualizacion de props 2`] = `
+<section
+  className="sc-bdnxRM cuvweL"
+>
+  <div>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="marvel"
+        src="marvel-logo.jpeg"
+      />
+    </a>
+    <form
+      style={
+        Object {
+          "width": "70%",
+        }
+      }
+    >
+      <i
+        className="fas fa-search"
+      />
+      <input
+        data-testid="input"
+        onChange={[Function]}
+        placeholder="Buscar..."
+        type="text"
+        value=""
+      />
+    </form>
+    <button
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-star fa"
+        data-testid="i"
+      />
+    </button>
+  </div>
+</section>
+`;

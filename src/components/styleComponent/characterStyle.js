@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeoreCardContainer = styled.div`
+export const CharacterCardContainer = styled.div`
 	width: 246px;
 	height: 370px;
 	box-shadow: 8px 8px 10px rgba(47, 49, 49, 1);

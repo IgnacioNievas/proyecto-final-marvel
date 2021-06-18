@@ -7,15 +7,15 @@ let api;
 
 export const getCharacters = async (query) => {
 	if (query === '') {
-		api = `${URL}/characters?orderBy=name&offset=${randomNumber}&limit=100&ts=1&apikey=${pukey}&hash=${hash}`;
+		api = `${URL}/characters?orderBy=name&offset=${randomNumber}&limit=50&ts=1&apikey=${pukey}&hash=${hash}`;
 	} else {
-		api = `${URL}/characters?nameStartsWith=${query}&orderBy=name&limit=100&ts=1&apikey=${pukey}&hash=${hash}`;
+		api = `${URL}/characters?nameStartsWith=${query}&orderBy=name&limit=50&ts=1&apikey=${pukey}&hash=${hash}`;
 	}
 	const result = await axios.get(`${api}`);
 	return result?.data?.data?.results;
 };
 
-export const getComic = async (id, query) => {
+export const getDetails = async (id, query) => {
 	const resul = await axios.get(
 		`${URL}/characters/${id}/comics?${
 			query ? `titleStartsWith=${query}&` : ''
@@ -25,7 +25,7 @@ export const getComic = async (id, query) => {
 	return resul?.data?.data?.results;
 };
 
-export const getDetails = async (id) => {
+export const getComic = async (id) => {
 	const resul = await axios.get(
 		`${URL}/comics/${id}?ts=1&apikey=${pukey}&hash=${hash}`
 	);

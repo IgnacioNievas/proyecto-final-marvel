@@ -1,12 +1,12 @@
 import React from 'react';
-import { Contents } from '../styleComponent/CardStyle';
+import { Contents } from '../styleComponent/characterStyle';
 import DetailsCard from '../Cards/detailsComicCards';
 
 const DetailsTable = ({ comics }) => {
 	return (
 		<Contents>
 			{comics.map((comic) => (
-				<DetailsCard key={comic.id} comicitem={comic}></DetailsCard>
+				<DetailsCard key={comic.id} comic={comic}></DetailsCard>
 			))}
 		</Contents>
 	);
