@@ -10,6 +10,7 @@ const CharacterCard = ({ character, updatefavoriteCharacters }) => {
 	const iconFavorite = favoriteCharacters.find((c) => c.id === character.id)
 		? favorite
 		: noFavorite;
+	// debugger;
 
 	const clickFavHandle = (e) => {
 		e.preventDefault();

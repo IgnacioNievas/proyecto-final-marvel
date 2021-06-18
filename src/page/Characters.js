@@ -32,7 +32,9 @@ const Characters = () => {
 
 	function updatefavoriteCharacters(character) {
 		const update = [...favorite];
-		const isfav = update.indexOf(character);
+		const charaFavorite = favorite.find((c) => c.id === character.id);
+		const isfav = update.indexOf(charaFavorite);
+
 		if (isfav >= 0) {
 			update.splice(isfav, 1);
 		} else {
@@ -41,6 +43,7 @@ const Characters = () => {
 		setFavorite(update);
 		setContext({ favoriteCharacters: update });
 		localStorage.setItem(localKey, JSON.stringify(update));
+		console.log(isfav);
 	}
 
 	const viewFavorite = () => {
