@@ -45,7 +45,7 @@ export const ComicStyle = styled.div`
 		width: 80px;
 		height: 30px;
 	}
-	p.small {
+	.small {
 		text-decoration: ;
 		font-weight: bolder;
 		font-size: 0.9rem;

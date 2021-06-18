@@ -25,14 +25,9 @@ test('<Search />, comprabacion de elementos y actualizacion de props', () => {
 	expect(input.tagName).not.toBe('TEXTAREA');
 
 	const button = screen.getByTestId('button');
-	// const clickviewHandle = jest.fn();
 	expect(button.tagName).toBe('BUTTON');
 	expect(button.tagName).not.toBe('INPUT');
 	expect(button).toBeInTheDocument();
-
-	// userEvent.click(button);
-	// expect(clickviewHandle).toHaveBeenCalled();
-	// expect(clickviewHandle).toHaveBeenCalledTimes(1);
 
 	act(() => {
 		props = create(

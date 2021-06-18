@@ -19,12 +19,13 @@ const ComicCard = ({ comic }) => {
 				<div className='infoComic'>
 					<h1>{comic.title}</h1>
 					<p className='comicDescription'> {comic.description}</p>
-					<p className='small'>
-						•{comic.prices[0].type} : $ {comic.prices[0].price}
-					</p>
-					<p className='small'>
-						• {comic.prices[1].type} : $ {comic.prices[1].price}
-					</p>
+
+					{comic.prices.map((price) => (
+						<p className='small'>
+							• {price.type} : $ {price.price}
+						</p>
+					))}
+
 					<button onClick={gotBackHandle}>Volver</button>
 				</div>
 			</div>
