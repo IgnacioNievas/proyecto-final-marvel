@@ -4,7 +4,6 @@ import '@testing-library/jest-dom/extend-expect';
 import { act, create } from 'react-test-renderer';
 import Search from '../components/search/SearchCharacter';
 import { BrowserRouter } from 'react-router-dom';
-// import userEvent from '@testing-library/user-event';
 
 afterEach(cleanup);
 
@@ -28,11 +27,6 @@ test('<Search />, comprabacion de elementos y actualizacion de props', () => {
 	expect(button.tagName).toBe('BUTTON');
 	expect(button.tagName).not.toBe('INPUT');
 	expect(button).toBeInTheDocument();
-
-	// const clickviewHandle = jest.fn();
-	// userEvent.click(button);
-	// expect(clickviewHandle).toHaveBeenCalled();
-	// expect(clickviewHandle).toHaveBeenCalledTimes(1);
 
 	act(() => {
 		props = create(
