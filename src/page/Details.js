@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getComic } from '../api/get';
+import { getDetails } from '../api/get';
 import { useParams } from 'react-router';
 import DetailsTable from '../components/tableMaps/detailsComicTable';
 import Search from '../components/search/SearchCharacter';
@@ -7,17 +7,15 @@ import { Loader } from '../components/loading';
 import ErrComic from '../components/erroresComponent/errorComic';
 
 const Details = () => {
-	const [items, setItems] = useState(null);
+	const [comics, setComics] = useState(null);
 	const [isLoading, setLoading] = useState(true);
 	const [query, setQuery] = useState('');
 	const { id } = useParams();
-	// console.log(id);
 
 	useEffect(() => {
-		getComic(id, query)
+		getDetails(id, query)
 			.then((comics) => {
-				// debugger;
-				setItems(comics);
+				setComics(comics);
 				// console.log(comics);
 			})
 			.catch((e) => {
@@ -28,7 +26,7 @@ const Details = () => {
 
 	return isLoading ? (
 		<Loader />
-	) : !items.length ? (
+	) : !comics.length ? (
 		<div>
 			<Search search={setQuery}></Search>
 			<ErrComic />
@@ -36,7 +34,7 @@ const Details = () => {
 	) : (
 		<div>
 			<Search search={setQuery}></Search>
-			{items && <DetailsTable comics={items} loading={isLoading} />}
+			{comics && <DetailsTable comics={comics} loading={isLoading} />}
 		</div>
 	);
 };

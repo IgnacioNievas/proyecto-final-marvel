@@ -15,6 +15,12 @@ export const SearchStyle = styled.section`
 		outline: none;
 		border: none;
 	}
+	form {
+		opacity: 0.6;
+	}
+	form:hover {
+		opacity: 1;
+	}
 	form i {
 		margin-right: 15px;
 	}

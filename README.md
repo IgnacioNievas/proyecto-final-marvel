@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+Marvel Hero Searcher:
+• Project developed with React using the Marvel API to search for characters.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Author:
+• @IgnacioNievas
 
-## Available Scripts
+Marvel Hero Searcher in Vercel:
 
-In the project directory, you can run:
+•To deploy this project run
+  npm run build
+  
+Tech Stack:
+•React.
+•Styled Components. 
+•React-Router.
 
-### `npm start`
+Functionalities:
+•Start with random characters.
+•Search for characters and Comic details that start with a word in the navigation bar.
+•Function to go back on the comic page
+•Function in logo go back to character page in comic page details
+•Ability to add, remove and view favorite characters.
+•Fully responsive page.
+•Character details .
+•Problems
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Run Locally:
+•Clone the project:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  git clone https://github.com/IgnacioNievas/proyecto-final-marvel
+  
+•Go to the project directory:
 
-### `npm run build`
+  cd proyecto-final-marvel
+  
+•Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  npm install
+  
+•Start the server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  npm run start
+  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Screenshots:
 
-### `npm run eject`
+•Characters
+![characters](https://user-images.githubusercontent.com/40864058/122487817-7d679200-cfb2-11eb-83da-1aa27f136ef8.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+•Comic details 
+![comics_details](https://user-images.githubusercontent.com/40864058/122489451-1fd54480-cfb6-11eb-8d4b-4d8f0dcf8bc1.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+•Comic
+![comic](https://user-images.githubusercontent.com/40864058/122489480-32e81480-cfb6-11eb-8983-deae18b56d96.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+•Favorite(function):
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Step 1 (select favorite):
+![favorite1](https://user-images.githubusercontent.com/40864058/122489507-3e3b4000-cfb6-11eb-8cca-c5a4c87a2d76.png)
 
-## Learn More
+-  Step 2 (selected favorite):
+![favorite2](https://user-images.githubusercontent.com/40864058/122489525-45624e00-cfb6-11eb-8f06-1168df86fd0a.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+•Show favorites:
+![mostrar_fav](https://user-images.githubusercontent.com/40864058/122489534-4c895c00-cfb6-11eb-9ab9-2822b3337747.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,10 +1,6 @@
 import React from 'react';
 
-const FavoriteContext = React.createContext({
-	favoriteCharacters: [],
-	updatefavoriteCharacters: (id) => null,
-	viewFavorite: () => null,
-});
+const FavoriteContext = React.createContext();
 
 export const FavProvider = FavoriteContext.Provider;
 

@@ -2,22 +2,30 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import { ComicStyle } from '../styleComponent/comicStyle';
 
-const ComicCard = ({ item }) => {
+const ComicCard = ({ comic }) => {
 	const history = useHistory();
+
 	function gotBackHandle() {
 		history.goBack();
 	}
+
 	return (
 		<ComicStyle>
-			<div className='detailsComic'>
+			<div className='comic'>
 				<img
-					src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-					alt={item.title}
+					src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+					alt={comic.title}
 				/>
 				<div className='infoComic'>
-					<h1>{item.title}</h1>
-					<p className='comicDetails'> {item.description}</p>
-					<button onClick={gotBackHandle}>volver</button>
+					<h1>{comic.title}</h1>
+					<p className='comicDescription'> {comic.description}</p>
+					<p className='small'>
+						•{comic.prices[0].type} : $ {comic.prices[0].price}
+					</p>
+					<p className='small'>
+						• {comic.prices[1].type} : $ {comic.prices[1].price}
+					</p>
+					<button onClick={gotBackHandle}>Volver</button>
 				</div>
 			</div>
 		</ComicStyle>
