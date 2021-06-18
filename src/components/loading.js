@@ -35,7 +35,7 @@ export const LoadingStyle = styled.div`
 		}
 	}
 	h1 {
-		margin-top: 120px;
+		margin-top: 200px;
 	}
 `;
 
