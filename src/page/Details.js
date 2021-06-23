@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { getDetails } from '../api/get';
 import { useParams } from 'react-router';
+import { getDetails } from '../api/get';
 import DetailsTable from '../components/tableMaps/detailsComicTable';
 import Search from '../components/search/SearchCharacter';
 import { Loader } from '../components/loading';
@@ -16,7 +16,6 @@ const Details = () => {
 		getDetails(id, query)
 			.then((comics) => {
 				setComics(comics);
-				// console.log(comics);
 			})
 			.catch((e) => {
 				console.log(e);

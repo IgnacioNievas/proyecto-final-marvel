@@ -13,7 +13,6 @@ const Comic = () => {
 		getComic(comicId)
 			.then((comic) => {
 				setComic(comic);
-				// console.log(comic);
 			})
 			.catch((e) => {
 				console.log(e);

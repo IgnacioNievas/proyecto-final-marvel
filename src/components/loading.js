@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import dead from '../assets/images/deadpool.png';
 
 export const LoadingStyle = styled.div`
 	width: 100%;
@@ -13,36 +14,36 @@ export const LoadingStyle = styled.div`
 	align-items: center;
 	padding: 10px;
 
-	div {
+	img {
 		box-sizing: border-box;
 		display: block;
 		position: absolute;
-		width: 64px;
-		height: 64px;
+		width: 200px;
+		height: 180px;
 		margin: 8px;
-		border: 8px solid red;
-		border-radius: 50%;
 		animation: load 1.2s infinite;
-		border-color: red red red transparent;
 	}
 
 	@keyframes load {
 		0% {
 			transform: rotate(0deg);
 		}
+		50% {
+			transform: rotate(180deg);
+		}
 		100% {
 			transform: rotate(360deg);
 		}
 	}
 	h1 {
-		margin-top: 200px;
+		margin-top: 250px;
 	}
 `;
 
 export const Loader = () => {
 	return (
 		<LoadingStyle>
-			<div></div>
+			<img src={dead} alt='deadpool' />
 			<h1>Loading...</h1>
 		</LoadingStyle>
 	);

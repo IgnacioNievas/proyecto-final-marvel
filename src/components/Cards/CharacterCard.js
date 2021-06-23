@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { CharacterCardContainer } from '../styleComponent/characterStyle';
 import { Link } from 'react-router-dom';
 import FavoriteContext from '../favorite/favorite';
+import { CharacterCardContainer } from '../styleComponent/characterStyle';
 
 const CharacterCard = ({ character, updatefavoriteCharacters }) => {
 	const { favoriteCharacters } = useContext(FavoriteContext);
@@ -10,7 +10,6 @@ const CharacterCard = ({ character, updatefavoriteCharacters }) => {
 	const iconFavorite = favoriteCharacters.find((c) => c.id === character.id)
 		? favorite
 		: noFavorite;
-	// debugger;
 
 	const clickFavHandle = (e) => {
 		e.preventDefault();

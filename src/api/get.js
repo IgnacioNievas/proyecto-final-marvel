@@ -21,7 +21,7 @@ export const getDetails = async (id, query) => {
 			query ? `titleStartsWith=${query}&` : ''
 		}orderBy=issueNumber&ts=1&apikey=${pukey}&hash=${hash}`
 	);
-	// debugger;
+
 	return resul?.data?.data?.results;
 };
 
@@ -29,6 +29,6 @@ export const getComic = async (id) => {
 	const resul = await axios.get(
 		`${URL}/comics/${id}?ts=1&apikey=${pukey}&hash=${hash}`
 	);
-	// debugger;
+
 	return resul?.data?.data?.results;
 };

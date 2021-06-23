@@ -21,7 +21,7 @@ const ComicCard = ({ comic }) => {
 					<p className='comicDescription'> {comic.description}</p>
 
 					{comic.prices.map((price) => (
-						<p className='small'>
+						<p key={comic.id} className='small'>
 							• {price.type} : $ {price.price}
 						</p>
 					))}

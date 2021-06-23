@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom/extend-expect';
+import renderer from 'react-test-renderer';
 import ErrCharacters from '../components/erroresComponent/errorCharacters';
 
 test('<ErrCharacters /> , prueba de existencia de elementos', () => {
