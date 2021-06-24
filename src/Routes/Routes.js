@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Details from '../page/Details';
 import Characters from '../page/Characters';
-import NotFound from '../components/erroresComponent/NotFound';
+import NotFound from '../components/errorescomponent/NotFound';
 import Comic from '../page/Comic';
 
 const Routes = () => {

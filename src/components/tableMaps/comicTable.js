@@ -1,5 +1,5 @@
 import React from 'react';
-import ComicCard from '../Cards/comicCard';
+import ComicCard from '../cards/comicCard';
 
 const ComicsTable = ({ comic }) => {
 	return (

@@ -3,7 +3,7 @@ import { render, cleanup, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { act, create } from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
-import Search from '../components/search/SearchCharacter';
+import Search from '../components/search/searchcharacter';
 
 afterEach(cleanup);
 

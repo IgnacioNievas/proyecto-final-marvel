@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-import ErrCharacters from '../components/erroresComponent/errorCharacters';
+import ErrCharacters from '../components/errorescomponent/errorcharacters';
 
 test('<ErrCharacters /> , prueba de existencia de elementos', () => {
 	render(<ErrCharacters />);
@@ -29,7 +29,7 @@ test('<ErrCharacters /> , prueba de existencia de elementos', () => {
 	expect(h4.tagName).toBe('H4');
 	expect(h4.tagName).not.toBe('SPAN', 'H1', 'H2', 'H3', 'P', 'INPUT');
 	expect(h4).toHaveTextContent(
-		'o tal vez no alla elegido ningun personaje favorito tampoco'
+		'o tal vez no hayas elegido ningun personaje favorito tampoco'
 	);
 	expect(h4).toBeInTheDocument();
 

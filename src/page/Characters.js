@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { getCharacters } from '../api/get';
-import CharactersTable from '../components/tableMaps/CharactersTable';
+import CharactersTable from '../components/tablemaps/CharactersTable';
 import Search from '../components/search/SearchCharacter';
 import { Loader } from '../components/loading';
-import ErrCharacters from '../components/erroresComponent/errorCharacters';
+import ErrCharacters from '../components/errorescomponent/errorCharacters';
 import { FavProvider } from '../components/favorite/favorite';
 
 const Characters = () => {
@@ -13,9 +13,7 @@ const Characters = () => {
 	const [characters, setCharacters] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 	const [query, setQuery] = useState('');
-	const [context, setContext] = useState({
-		favoriteCharacters: JSON.parse(getLocal) || [],
-	});
+	const [context, setContext] = useState(JSON.parse(getLocal) || []);
 	const [favorite, setFavorite] = useState(JSON.parse(getLocal) || []);
 
 	useEffect(() => {
@@ -40,7 +38,7 @@ const Characters = () => {
 			update.push(character);
 		}
 		setFavorite(update);
-		setContext({ favoriteCharacters: update });
+		setContext(update);
 		localStorage.setItem(localKey, JSON.stringify(update));
 	}
 
@@ -51,14 +49,14 @@ const Characters = () => {
 	return isLoading ? (
 		<Loader />
 	) : !characters.length ? (
-		<FavProvider value={context}>
+		<FavProvider value={{ favoriteCharacters: context }}>
 			<div>
 				<Search search={setQuery} viewFavorite={viewFavorite}></Search>
 				<ErrCharacters />
 			</div>
 		</FavProvider>
 	) : (
-		<FavProvider value={context}>
+		<FavProvider value={{ favoriteCharacters: context }}>
 			<div>
 				<Search search={setQuery} viewFavorite={viewFavorite}></Search>
 				<CharactersTable

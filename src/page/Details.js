@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { getDetails } from '../api/get';
-import DetailsTable from '../components/tableMaps/detailsComicTable';
+import DetailsTable from '../components/tablemaps/detailsComicTable';
 import Search from '../components/search/SearchCharacter';
 import { Loader } from '../components/loading';
-import ErrComic from '../components/erroresComponent/errorComic';
+import ErrComic from '../components/errorescomponent/errorComic';
 
 const Details = () => {
 	const [comics, setComics] = useState(null);

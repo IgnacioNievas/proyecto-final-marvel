@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrStyle } from '../styleComponent/ErrStyle';
+import { ErrStyle } from '../stylecomponent/errorstyle';
 const ErrCharacters = () => {
 	return (
 		<ErrStyle>
@@ -9,7 +9,7 @@ const ErrCharacters = () => {
 			<h2 data-testid='h2'> Tal vez lleve - como por ejemplo : Frog-Man</h2>
 			<h3 data-testid='h3'> o tal vez no exista el personaje </h3>
 			<h4 data-testid='h4'>
-				o tal vez no alla elegido ningun personaje favorito tampoco
+				o tal vez no hayas elegido ningun personaje favorito tampoco
 			</h4>
 			<p data-testid='p'>Revise y vuelva a intentarlo por favor </p>
 		</ErrStyle>

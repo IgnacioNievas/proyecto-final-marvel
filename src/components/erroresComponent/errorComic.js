@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrStyle } from '../styleComponent/ErrStyle';
+import { ErrStyle } from '../stylecomponent/errorstyle';
 
 const ErrComic = () => {
 	return (
