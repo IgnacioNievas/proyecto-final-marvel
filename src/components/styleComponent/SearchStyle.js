@@ -27,7 +27,6 @@ export const SearchStyle = styled.section`
 	button {
 		background: transparent;
 		border: none;
-		font-size: 25px;
 		cursor: pointer;
 		color: gray;
 	}

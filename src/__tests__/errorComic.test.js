@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-import ErrComic from '../components/erroresComponent/errorComic';
+import ErrComic from '../components/errorescomponent/errorcomic';
 
 test('<ErrComic/> , prueba de existencia de elementos', () => {
 	const wrapper = render(<ErrComic />);

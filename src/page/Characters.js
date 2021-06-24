@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { getCharacters } from '../api/get';
-import CharactersTable from '../components/tableMaps/CharactersTable';
-import Search from '../components/search/SearchCharacter';
+import CharactersTable from '../components/tablemaps/characterstable';
+import Search from '../components/search/searchcharacter';
 import { Loader } from '../components/loading';
-import ErrCharacters from '../components/erroresComponent/errorCharacters';
+import ErrCharacters from '../components/errorescomponent/errorcharacters';
 import { FavProvider } from '../components/favorite/favorite';
 
 const Characters = () => {

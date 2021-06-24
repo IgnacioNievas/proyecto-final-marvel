@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/marvel-logo.jpeg';
-
-import { SearchStyle } from '../styleComponent/SearchStyle';
+import FavoriteContext from '../favorite/favorite';
+import { SearchStyle } from '../stylecomponent/searchstyle';
 
 const Search = ({ search, viewFavorite }) => {
 	const [text, setText] = useState('');
 	const { pathname } = useLocation();
+	const { favoriteCharacters } = useContext(FavoriteContext);
+	const noFavorite = 'far fa-star fa-2x';
+	const favorite = 'fas fa-star fa-2x';
+	const iconFavorite = favoriteCharacters.length > 0 ? favorite : noFavorite;
+	console.log(favoriteCharacters, iconFavorite);
 
 	const onSearch = (e) => {
 		setText(e.target.value);
@@ -38,7 +43,7 @@ const Search = ({ search, viewFavorite }) => {
 
 				{pathname === '/' ? (
 					<button data-testid='button' onClick={clickviewFavHandle}>
-						<i data-testid='i' className='fas fa-star fa'></i>
+						<i data-testid='i' className={iconFavorite}></i>
 					</button>
 				) : null}
 			</div>
