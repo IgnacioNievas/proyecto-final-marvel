@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { getComic } from '../api/get';
-import ComicsTable from '../components/tablemaps/comicTable';
+import ComicsTable from '../components/tableMaps/comicTable';
 import { Loader } from '../components/loading';
 
 const Comic = () => {

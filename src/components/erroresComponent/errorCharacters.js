@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrStyle } from '../stylecomponent/errorstyle';
+import { ErrStyle } from '../styleComponent/errorstyle';
 const ErrCharacters = () => {
 	return (
 		<ErrStyle>

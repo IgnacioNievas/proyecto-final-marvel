@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/marvel-logo.jpeg';
 import FavoriteContext from '../favorite/favorite';
-import { SearchStyle } from '../stylecomponent/SearchStyle';
+import { SearchStyle } from '../styleComponent/SearchStyle';
 
 const Search = ({ search, viewFavorite }) => {
 	const [text, setText] = useState('');

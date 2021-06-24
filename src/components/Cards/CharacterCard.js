@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import FavoriteContext from '../favorite/favorite';
-import { CharacterCardContainer } from '../stylecomponent/characterstyle';
+import { CharacterCardContainer } from '../styleComponent/characterstyle';
 
 const CharacterCard = ({ character, updatefavoriteCharacters }) => {
 	const { favoriteCharacters } = useContext(FavoriteContext);

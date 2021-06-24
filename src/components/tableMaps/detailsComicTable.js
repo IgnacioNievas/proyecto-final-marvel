@@ -1,6 +1,6 @@
 import React from 'react';
-import DetailsCard from '../cards/detailsComicCards';
-import { Contents } from '../stylecomponent/characterstyle';
+import DetailsCard from '../Cards/detailsComicCards';
+import { Contents } from '../styleComponent/characterstyle';
 
 const DetailsTable = ({ comics }) => {
 	return (
