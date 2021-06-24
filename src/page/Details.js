@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { getDetails } from '../api/get';
 import DetailsTable from '../components/tablemaps/detailscomictable';
-import SearchComic from '../components/search/searchcomic';
+import Search from '../components/search/searchcharacter';
 import { Loader } from '../components/loading';
 import ErrComic from '../components/errorescomponent/errorcomic';
 
@@ -27,12 +27,12 @@ const Details = () => {
 		<Loader />
 	) : !comics.length ? (
 		<div>
-			<SearchComic search={setQuery}></SearchComic>
+			<Search search={setQuery}></Search>
 			<ErrComic />
 		</div>
 	) : (
 		<div>
-			<SearchComic search={setQuery}></SearchComic>
+			<Search search={setQuery}></Search>
 			{comics && <DetailsTable comics={comics} loading={isLoading} />}
 		</div>
 	);

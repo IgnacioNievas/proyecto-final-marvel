@@ -2,18 +2,17 @@
 
 exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
 <section
-  className="sc-bdnxRM cuvweL"
+  className="sc-bdnxRM dWgPMD"
 >
   <div>
-    <a
-      href="/"
+    <button
       onClick={[Function]}
     >
       <img
         alt="marvel"
         src="marvel-logo.jpeg"
       />
-    </a>
+    </button>
     <form
       style={
         Object {
@@ -37,7 +36,7 @@ exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
       onClick={[Function]}
     >
       <i
-        className="fas fa-star fa"
+        className="far fa-star fa-2x"
         data-testid="i"
       />
     </button>
@@ -47,18 +46,17 @@ exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
 
 exports[`<Search />, comprabacion de elementos y actualizacion de props 2`] = `
 <section
-  className="sc-bdnxRM cuvweL"
+  className="sc-bdnxRM dWgPMD"
 >
   <div>
-    <a
-      href="/"
+    <button
       onClick={[Function]}
     >
       <img
         alt="marvel"
         src="marvel-logo.jpeg"
       />
-    </a>
+    </button>
     <form
       style={
         Object {
@@ -82,7 +80,7 @@ exports[`<Search />, comprabacion de elementos y actualizacion de props 2`] = `
       onClick={[Function]}
     >
       <i
-        className="fas fa-star fa"
+        className="far fa-star fa-2x"
         data-testid="i"
       />
     </button>

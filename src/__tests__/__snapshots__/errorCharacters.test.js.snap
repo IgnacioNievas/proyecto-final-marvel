@@ -25,7 +25,7 @@ exports[`<ErrCharacters /> , prueba de existencia de elementos 1`] = `
   <h4
     data-testid="h4"
   >
-    o tal vez no alla elegido ningun personaje favorito tampoco
+    o tal vez no hayas elegido ningun personaje favorito tampoco
   </h4>
   <p
     data-testid="p"
