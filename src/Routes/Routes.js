@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Details from '../page/details';
-import Characters from '../page/characters';
-import NotFound from '../components/errorescomponent/notfound';
-import Comic from '../page/comic';
+import Details from '../page/Details';
+import Characters from '../page/Characters';
+import NotFound from '../components/errorescomponent/NotFound';
+import Comic from '../page/Comic';
 
 const Routes = () => {
 	return (

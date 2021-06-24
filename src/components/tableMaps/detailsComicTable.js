@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailsCard from '../cards/detailscomiccards';
+import DetailsCard from '../cards/detailsComicCards';
 import { Contents } from '../stylecomponent/characterstyle';
 
 const DetailsTable = ({ comics }) => {
