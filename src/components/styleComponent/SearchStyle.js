@@ -10,6 +10,7 @@ export const SearchStyle = styled.section`
 
 	img {
 		width: 50px;
+		height: 20px;
 	}
 	input {
 		outline: none;
@@ -34,6 +35,7 @@ export const SearchStyle = styled.section`
 	@media (max-width: 320px) {
 		img {
 			width: 27px;
+			height: 15px;
 		}
 
 		input {

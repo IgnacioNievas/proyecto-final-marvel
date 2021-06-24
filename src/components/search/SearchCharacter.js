@@ -1,12 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/marvel-logo.jpeg';
 import FavoriteContext from '../favorite/favorite';
 import { SearchStyle } from '../stylecomponent/searchstyle';
 
 const Search = ({ search, viewFavorite }) => {
 	const [text, setText] = useState('');
-	const { pathname } = useLocation();
 	const { favoriteCharacters } = useContext(FavoriteContext);
 	const noFavorite = 'far fa-star fa-2x';
 	const favorite = 'fas fa-star fa-2x';
@@ -23,13 +21,17 @@ const Search = ({ search, viewFavorite }) => {
 		viewFavorite();
 	};
 
+	const refreshHandle = (e) => {
+		e.preventDefault();
+		window.location.reload();
+	};
+
 	return (
 		<SearchStyle>
 			<div>
-				<Link to='/'>
+				<button onClick={refreshHandle}>
 					<img src={logo} alt='marvel' />
-				</Link>
-
+				</button>
 				<form style={{ width: '70%' }}>
 					<i className='fas fa-search'></i>
 					<input
@@ -41,11 +43,9 @@ const Search = ({ search, viewFavorite }) => {
 					/>
 				</form>
 
-				{pathname === '/' ? (
-					<button data-testid='button' onClick={clickviewFavHandle}>
-						<i data-testid='i' className={iconFavorite}></i>
-					</button>
-				) : null}
+				<button data-testid='button' onClick={clickviewFavHandle}>
+					<i data-testid='i' className={iconFavorite}></i>
+				</button>
 			</div>
 		</SearchStyle>
 	);
