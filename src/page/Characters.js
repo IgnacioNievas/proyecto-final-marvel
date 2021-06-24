@@ -13,7 +13,6 @@ const Characters = () => {
 	const [characters, setCharacters] = useState([]);
 	const [isLoading, setLoading] = useState(true);
 	const [query, setQuery] = useState('');
-	const [context, setContext] = useState(JSON.parse(getLocal) || []);
 	const [favorite, setFavorite] = useState(JSON.parse(getLocal) || []);
 
 	useEffect(() => {
@@ -38,7 +37,6 @@ const Characters = () => {
 			update.push(character);
 		}
 		setFavorite(update);
-		setContext(update);
 		localStorage.setItem(localKey, JSON.stringify(update));
 	}
 
@@ -49,14 +47,14 @@ const Characters = () => {
 	return isLoading ? (
 		<Loader />
 	) : !characters.length ? (
-		<FavProvider value={{ favoriteCharacters: context }}>
+		<FavProvider value={{ favoriteCharacters: favorite }}>
 			<div>
 				<Search search={setQuery} viewFavorite={viewFavorite}></Search>
 				<ErrCharacters />
 			</div>
 		</FavProvider>
 	) : (
-		<FavProvider value={{ favoriteCharacters: context }}>
+		<FavProvider value={{ favoriteCharacters: favorite }}>
 			<div>
 				<Search search={setQuery} viewFavorite={viewFavorite}></Search>
 				<CharactersTable
