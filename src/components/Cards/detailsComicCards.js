@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { ContainerComicCard } from '../styleComponent/detailscomicstyle';
+import { ContainerComicCard } from '../styleComponent/detailsComicStyle';
 
 const DetailsCard = ({ comic }) => {
 	const { url } = useRouteMatch();

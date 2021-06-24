@@ -1,6 +1,6 @@
 import React from 'react';
 import CharacterCard from '../Cards/CharacterCard';
-import { Contents } from '../styleComponent/characterstyle';
+import { Contents } from '../styleComponent/characterStyle';
 
 const CharactersTable = ({ characters, updatefavoriteCharacters }) => {
 	return (

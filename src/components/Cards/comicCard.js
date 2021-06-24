@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import { ComicStyle } from '../styleComponent/comicstyle';
+import { ComicStyle } from '../styleComponent/comicStyle';
 
 const ComicCard = ({ comic }) => {
 	const history = useHistory();
