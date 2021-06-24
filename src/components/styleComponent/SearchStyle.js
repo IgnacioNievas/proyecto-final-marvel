@@ -32,10 +32,10 @@ export const SearchStyle = styled.section`
 		color: gray;
 	}
 
-	@media (max-width: 320px) {
+	@media (max-width: 380px) {
 		img {
-			width: 27px;
-			height: 15px;
+			width: 25px;
+			height: 10px;
 		}
 
 		input {
