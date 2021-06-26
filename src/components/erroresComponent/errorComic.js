@@ -13,11 +13,11 @@ const ErrComic = () => {
 				Tal vez no exista o no se encuentre en este personaje
 			</h2>
 			<h3 className='sub3' data-testid='titulo3'>
-				O thanos lo habrá con guantelete del infinito
+				O Thanos los habrá borrado con guantelete del infinito
 			</h3>
 			<p className='p2' data-testid='parrafo'>
-				• Por favor haz click sobre para volver o en el logo para volver a los
-				personajes
+				• Por favor haz click sobre Thanos para volver o en el logo de Marvel
+				para volver a los personajes
 			</p>
 			<p className='p2' data-testid='parrafo2'>
 				• Sino borrar la palabra del buscador y volveras a los comics que

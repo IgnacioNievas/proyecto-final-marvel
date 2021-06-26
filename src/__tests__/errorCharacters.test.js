@@ -37,7 +37,7 @@ test('<ErrCharacters /> , prueba de existencia de elementos', () => {
 	expect(p.tagName).toBe('P');
 	expect(p.tagName).not.toBe('SPAN', 'H1', 'H2', 'H3', 'H4', 'INPUT');
 	expect(p).toHaveTextContent(
-		'• Revise y vuelva a intentarlo , apriete el logo para volver por favor'
+		'• Revise y vuelva a intentarlo , apriete el logo de Marvel para volver, por favor'
 	);
 	expect(p).toBeInTheDocument();
 

@@ -36,7 +36,10 @@ export const ErrStyle = styled.div`
 			font-size: 1.1em;
 		}
 		.p2 {
-			font-size: 0.6em;
+			font-size: 0.5em;
+		}
+		.p {
+			font-size: 0.9em;
 		}
 	}
 	@media (max-width: 505px) {
@@ -105,7 +108,7 @@ export const ErrStyle = styled.div`
 			font-size: 0.5em;
 		}
 		.p2 {
-			font-size: 0.45em;
+			font-size: 0.4em;
 		}
 	}
 

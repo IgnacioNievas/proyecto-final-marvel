@@ -16,7 +16,8 @@ const ErrCharacters = () => {
 				o tal vez no hayas elegido ningun personaje favorito tampoco
 			</h4>
 			<p className='p' data-testid='p'>
-				• Revise y vuelva a intentarlo , apriete el logo para volver por favor
+				• Revise y vuelva a intentarlo , apriete el logo de Marvel para volver,
+				por favor
 			</p>
 			<p className='p' data-testid='p2'>
 				• Sino borrar la palabra del buscador y volveras a los personajes
