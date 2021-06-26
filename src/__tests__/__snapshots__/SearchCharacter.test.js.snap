@@ -2,7 +2,7 @@
 
 exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
 <section
-  className="sc-bdnxRM dWgPMD"
+  className="sc-bdnxRM hAbAwW"
 >
   <div>
     <button
@@ -46,7 +46,7 @@ exports[`<Search />, comprabacion de elementos y actualizacion de props 1`] = `
 
 exports[`<Search />, comprabacion de elementos y actualizacion de props 2`] = `
 <section
-  className="sc-bdnxRM dWgPMD"
+  className="sc-bdnxRM hAbAwW"
 >
   <div>
     <button

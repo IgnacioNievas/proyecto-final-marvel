@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getCharacters } from '../api/get';
 import CharactersTable from '../components/tableMaps/CharactersTable';
 import Search from '../components/search/SearchCharacter';
-import { Loader } from '../components/loading';
+import { LoaderCharacters } from '../components/loading/loading';
 import ErrCharacters from '../components/erroresComponent/errorCharacters';
 import { FavProvider } from '../components/favorite/favorite';
 
@@ -45,7 +45,7 @@ const Characters = () => {
 	};
 
 	return isLoading ? (
-		<Loader />
+		<LoaderCharacters />
 	) : !characters.length ? (
 		<FavProvider value={{ favoriteCharacters: favorite }}>
 			<div>
@@ -60,7 +60,6 @@ const Characters = () => {
 				<CharactersTable
 					updatefavoriteCharacters={updatefavoriteCharacters}
 					characters={characters}
-					isLoading={isLoading}
 				/>
 			</div>
 		</FavProvider>

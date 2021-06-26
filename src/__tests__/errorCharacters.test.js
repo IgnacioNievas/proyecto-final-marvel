@@ -36,8 +36,19 @@ test('<ErrCharacters /> , prueba de existencia de elementos', () => {
 	const p = screen.getByTestId('p');
 	expect(p.tagName).toBe('P');
 	expect(p.tagName).not.toBe('SPAN', 'H1', 'H2', 'H3', 'H4', 'INPUT');
-	expect(p).toHaveTextContent('Revise y vuelva a intentarlo por favor');
+	expect(p).toHaveTextContent(
+		'• Revise y vuelva a intentarlo , apriete el logo para volver por favor'
+	);
 	expect(p).toBeInTheDocument();
+
+	const p2 = screen.getByTestId('p2');
+	expect(p2.tagName).toBe('P');
+	expect(p2.tagName).not.toBe('SPAN', 'H1', 'H2', 'H3', 'H4', 'INPUT');
+	expect(p2).toHaveTextContent(
+		'• Sino borrar la palabra del buscador y volveras a los personajes'
+	);
+	expect(p2).toBeInTheDocument();
+
 	const erro = renderer.create(<ErrCharacters />).toJSON();
 
 	expect(erro).toMatchSnapshot();

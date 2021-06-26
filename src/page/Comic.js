@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { getComic } from '../api/get';
 import ComicsTable from '../components/tableMaps/comicTable';
-import { Loader } from '../components/loading';
+import { LoaderComic } from '../components/loading/loading';
 
 const Comic = () => {
 	const [comic, setComic] = useState(null);
@@ -21,9 +21,9 @@ const Comic = () => {
 	}, [comicId]);
 
 	return isLoading ? (
-		<Loader />
+		<LoaderComic />
 	) : (
-		<div>{comic && <ComicsTable comic={comic} loding={isLoading} />}</div>
+		<div>{comic && <ComicsTable comic={comic} />}</div>
 	);
 };
 
