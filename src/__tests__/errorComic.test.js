@@ -28,14 +28,16 @@ test('<ErrComic/> , prueba de existencia de elementos', () => {
 	const h3 = screen.getByTestId('titulo3');
 	expect(h3.tagName).toBe('H3');
 	expect(h3.tagName).not.toBe('SPAN', 'H1', 'H2', 'H4', 'P', 'INPUT');
-	expect(h3).toHaveTextContent('O thanos lo habrá con guantelete del infinito');
+	expect(h3).toHaveTextContent(
+		'O Thanos los habrá borrado con guantelete del infinito'
+	);
 	expect(h3).toBeInTheDocument();
 
 	const p = screen.getByTestId('parrafo');
 	expect(p.tagName).toBe('P');
 	expect(p.tagName).not.toBe('SPAN', 'H1', 'H2', 'H3', 'H4', 'INPUT');
 	expect(p.textContent).toBe(
-		'• Por favor haz click sobre para volver o en el logo para volver a los personajes'
+		'• Por favor haz click sobre Thanos para volver o en el logo de Marvel para volver a los personajes'
 	);
 	expect(p).toBeInTheDocument();
 
