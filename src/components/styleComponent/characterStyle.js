@@ -21,6 +21,7 @@ export const CharacterCardContainer = styled.div`
 	h1 {
 		display: block;
 		position: absolute;
+		font-size: 1.3em;
 		margin-top: -68px;
 		color: white;
 		background-color: rgba(45, 49, 49, 0.8);
