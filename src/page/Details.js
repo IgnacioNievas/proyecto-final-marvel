@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import { getDetails } from '../api/get';
 import DetailsTable from '../components/tableMaps/detailsComicTable';
 import Search from '../components/search/SearchCharacter';
-import { Loader } from '../components/loading';
+import { LoaderDetails } from '../components/loading/loading';
 import ErrComic from '../components/erroresComponent/errorComic';
 
 const Details = () => {
@@ -24,7 +24,7 @@ const Details = () => {
 	}, [id, query]);
 
 	return isLoading ? (
-		<Loader />
+		<LoaderDetails />
 	) : !comics.length ? (
 		<div>
 			<Search search={setQuery}></Search>
@@ -33,7 +33,7 @@ const Details = () => {
 	) : (
 		<div>
 			<Search search={setQuery}></Search>
-			{comics && <DetailsTable comics={comics} loading={isLoading} />}
+			{comics && <DetailsTable comics={comics} />}
 		</div>
 	);
 };

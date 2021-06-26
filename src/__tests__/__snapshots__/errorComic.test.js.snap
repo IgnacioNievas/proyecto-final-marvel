@@ -2,9 +2,10 @@
 
 exports[`<ErrComic/> , prueba de existencia de elementos 1`] = `
 <div
-  className="sc-bdnxRM vYBlF"
+  className="sc-bdnxRM bjKOGz"
 >
   <h1
+    className="h"
     data-testid="titulo"
   >
     Comic no encontrado
@@ -13,9 +14,39 @@ exports[`<ErrComic/> , prueba de existencia de elementos 1`] = `
     />
   </h1>
   <h2
+    className="sub"
     data-testid="titulo2"
   >
     Tal vez no exista o no se encuentre en este personaje
   </h2>
+  <h3
+    className="sub3"
+    data-testid="titulo3"
+  >
+    O thanos lo habrá con guantelete del infinito
+  </h3>
+  <p
+    className="p2"
+    data-testid="parrafo"
+  >
+    • Por favor haz click sobre para volver o en el logo para volver a los personajes
+  </p>
+  <p
+    className="p2"
+    data-testid="parrafo2"
+  >
+    • Sino borrar la palabra del buscador y volveras a los comics que elegiste
+  </p>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <img
+      alt="thanos"
+      className="img2"
+      data-testid="img"
+      src="thanos.png"
+    />
+  </a>
 </div>
 `;

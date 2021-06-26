@@ -9,10 +9,10 @@ const Routes = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Route exact path='/details/:id/:name' component={Details} />
+				<Route exact path='/details/:id/:name/:name?' component={Details} />
 				<Route
 					exact
-					path={`/details/:id/:name/comic/:comicId/:name`}
+					path={`/details/:id/:name/:name?/comic/:comicId/:name`}
 					component={Comic}
 				/>
 				<Route exact path='/' component={Characters} />
